@@ -1,5 +1,6 @@
 #1 Import appropriate class
 from PermanentEmployee import Per_Emp
+from connect import myconnect
 class Employee:
       
       _empname=""
