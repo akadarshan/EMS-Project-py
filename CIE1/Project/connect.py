@@ -9,7 +9,7 @@ class myconnect:
                   id integer primary key AUTOINCREMENT,
                   name text,
                   email text,
-                  mobile integer,
+                  mobile text,
                   type text,
                   experience integer,
                   salary text
@@ -20,7 +20,7 @@ class myconnect:
             with self.connection:
                   self.connection.execute(
                         "insert into emp(name,email,mobile,type,experience,salary) values(:name,:email,:mobile,:type,:experience,:salary)",
-                        {'name': ename, 'email': eemail, 'mobile_no': emob, 'type': etype, 'experience': eexp, 'salary': esalary})
+                        {'name': ename, 'email': eemail, 'mobile': emob, 'type': etype, 'experience': eexp, 'salary': esalary})
             self.connection.commit()
 
       def display(self):
@@ -33,7 +33,7 @@ class myconnect:
                   print ("=========================================================")
                   print ("Name : " + l[0][1])
                   print ("Email : " + l[0][2])
-                  print ("Mobile No. : " + l[0][3])
+                  print ("Mobile : " + l[0][3])
                   print ("Type : " + l[0][4])
                   print ("Experience : ", l[0][5])
                   print ("Salary : ", l[0][6])
