@@ -5,8 +5,8 @@ class myconnect:
             #4 Create and connect to a database named “emp.db”
             self.connection = sqlite3.connect("emp.db")
             #5 Create a table named emp
-            self.connection.execute(''' create table if not exists emp(
-                  id integer primary key AUTOINCREMET,
+            self.connection.execute(''' create table if not exists emp(`
+                  id integer primary key AUTOINCREMENT,
                   name text,
                   email text,
                   mobile integer,

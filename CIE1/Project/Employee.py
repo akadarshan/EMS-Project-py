@@ -26,7 +26,7 @@ class Employee:
       #3 Create and implement static method
       @staticmethod
       def addnote():
-            notes = raw_input("Enter Notes :: ")
+            notes = input("Enter Notes :: ")
             filePointer = open("notes.txt", "a")
             filePointer.write(notes)
             print("Note Added")
