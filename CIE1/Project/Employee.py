@@ -1,6 +1,8 @@
 #1 Import appropriate class
 from PermanentEmployee import Per_Emp
 from connect import myconnect
+from Validation import validation
+
 class Employee:
       
       _empname=""
@@ -38,9 +40,11 @@ print("2. Display Emp")
 print("3. Add Notes")
 choice = int(input("Enter your Choice:"))
 if choice == 1:
-      c = Employee()
-      obj = myconnect()
-      obj.savetodb(c._empname,c._empemail,c._empmob,c._emptype,c._empexp,c._empsalary)
+      if validation.validateemail(c._empemail) and validation.validatetemobile(c._empmob):
+        obj = myconnect()
+        obj.savetodb(c._empname, c._empemail, c._empmob, c._emptype, c._empexp, c._empsalary)
+      else:
+        print ("Invalid Email OR Mobile Number Please Try Again")
 elif choice==2:
       obj = myconnect()
       obj.display()
