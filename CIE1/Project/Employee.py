@@ -40,6 +40,7 @@ print("2. Display Emp")
 print("3. Add Notes")
 choice = int(input("Enter your Choice:"))
 if choice == 1:
+      c = Employee()
       if validation.validateemail(c._empemail) and validation.validatetemobile(c._empmob):
         obj = myconnect()
         obj.savetodb(c._empname, c._empemail, c._empmob, c._emptype, c._empexp, c._empsalary)
