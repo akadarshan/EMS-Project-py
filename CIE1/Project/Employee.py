@@ -27,7 +27,7 @@ class Employee:
       @staticmethod
       def addnote():
             notes = input("Enter Notes :: ")
-            filePointer = open("notes.txt", "a")
+            filePointer = open("CIE1/Project/notes.txt", "a")
             filePointer.write(notes)
             print("Note Added")
             filePointer.close()

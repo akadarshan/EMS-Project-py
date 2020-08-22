@@ -3,7 +3,7 @@ class myconnect:
       
       def __init__(self):
             #4 Create and connect to a database named “emp.db”
-            self.connection = sqlite3.connect("emp.db")
+            self.connection = sqlite3.connect("CIE1/Project/emp.db")
             #5 Create a table named emp
             self.connection.execute(''' create table if not exists emp(
                   id integer primary key AUTOINCREMENT,
@@ -33,7 +33,7 @@ class myconnect:
                   print ("=========================================================")
                   print ("Name : " + l[0][1])
                   print ("Email : " + l[0][2])
-                  print ("Mobile : " + l[0][3])
+                  print ("Mobile No : " + l[0][3])
                   print ("Type : " + l[0][4])
                   print ("Experience : ", l[0][5])
                   print ("Salary : ", l[0][6])
