@@ -1,4 +1,5 @@
-#1
+#1 Import appropriate class
+from PermanentEmployee import Per_Emp
 class Employee:
       
       _empname=""
@@ -11,7 +12,7 @@ class Employee:
             self._empemail=input("enter email: ")
             self._empmob=input("enter mobile no: ")
             self._emptype = input("enter type: ")
-            self._empexp = int(input("enter experience"))
+            self._empexp = int(input("enter experience:"))
             self._empsalary = self.getsalary()
             
       def getsalary(self):
@@ -21,7 +22,15 @@ class Employee:
             else:
                   print("Invalid Employee. Please enter only 'p' or 'P'")
                   
-      #3
+      #3 Create and implement static method
+      @staticmethod
+      def addnote():
+            notes = raw_input("Enter Notes :: ")
+            filePointer = open("notes.txt", "a")
+            filePointer.write(notes)
+            print("Note Added")
+            filePointer.close()
+
                   
 print("1. Add Emp")
 print("2. Display Emp")
